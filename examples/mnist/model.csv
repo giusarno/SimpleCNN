@@ -1,0 +1,12 @@
+Conv,10,5,1,0
+MaxPool,2,2,0
+ReLU
+Conv,20,5,1,0
+Dropout,0.5
+MaxPool,2,2,0
+ReLU
+Linear,50
+ReLU
+Dropout,0.5
+Linear,10
+LogSoftmax
