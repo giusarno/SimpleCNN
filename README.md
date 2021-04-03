@@ -17,7 +17,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem = 1
 
 ## Run the MNIST example from console & windows:
 
-## Run the model Generation
+### Run the model Generation
 
 In this example we will be using the following parameters:
 input(image) size   = 28x28
@@ -31,7 +31,7 @@ inputfile           = model.csv (input file with model definition)
 > python3 ./simplecnn/modelgen.py -i 28x28 -d 2 -c 1 -b 10 -f ./examples/mnist/themodel.py -v ./examples/mnist/model.csv
 ```
 
-## Run the Training
+### Run the Training
 ```
 > python3 thetest.py
 ```
@@ -59,7 +59,7 @@ the following picture is displaied:
 
 ![Loss Function](https://github.com/giusarno/SimpleCNN/blob/master/examples/mnist/loss.png)
 
-## Run the test and validation:
+### Run the test and validation:
 
 `> python3 thetest.py`
 
