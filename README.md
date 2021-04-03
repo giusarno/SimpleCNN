@@ -33,6 +33,7 @@ inputfile           = model.csv (input file with model definition)
 
 ### Run the Training
 ```
+> cd ./examples/mnist
 > python3 thetest.py
 ```
 Output:
@@ -54,7 +55,7 @@ Train Epoch: 5 [58240/60000 (97%)]      Loss: 0.108263
 Train Epoch: 5 [58880/60000 (98%)]      Loss: 0.081022
 Train Epoch: 5 [59520/60000 (99%)]      Loss: 0.092410
 ```
-the following picture is displaied:
+the following picture is displayed:
 
 
 ![Loss Function](https://github.com/giusarno/SimpleCNN/blob/master/examples/mnist/loss.png)
@@ -84,6 +85,73 @@ Confusion matrix, without normalization
 [  21   13    0   12   82   16    1   52   15 5737]]
 
 ```
-the following picture is displaied:
+the following picture is displayed:
 
 ![confusion matrix](https://github.com/giusarno/SimpleCNN/blob/master/examples/mnist/conf_matrix.png)
+
+
+## Run the CIFAR10 example
+
+### Run the model Generation
+```
+In this example we will be using the following parameters:
+input(image) size   = 32x32
+dimension           = 2 (we are dealing with 2 dimension input)
+channels            = 3  (RGB is used)
+batch size          = 4 (number of inputs will go through the model at the same time)
+filename            = themodel.py (output filename)
+inputfile           = model.csv (input file with model definition)
+```
+
+`> python3 ./simplecnn/modelgen.py -i 32x32 -d 2 -c 3 -b 4 -f ./examples/cifar10/themodel.py -v ./examples/cifar10/model.csv`
+
+## Run the training
+
+```
+> cd ./examples/cifar10
+> python3 thetraining.py
+```
+Output:
+```
+Files already downloaded and verified
+Train Epoch: 1 [0/50000 (0%)]   Loss: 2.326186
+Train Epoch: 1 [40/50000 (0%)]  Loss: 2.304344
+..........................................
+..........................................
+Train Epoch: 5 [49800/50000 (100%)]     Loss: 1.370805
+Train Epoch: 5 [49840/50000 (100%)]     Loss: 0.616962
+Train Epoch: 5 [49880/50000 (100%)]     Loss: 0.784681
+Train Epoch: 5 [49920/50000 (100%)]     Loss: 1.301057
+Train Epoch: 5 [49960/50000 (100%)]     Loss: 1.799423
+```
+
+the following picture is displaied:
+
+![training loss](./examples/cifar10/loss.png)
+
+
+### Run the test and validation:
+
+`> python3 thetest.py`
+
+Output:
+```
+Test set: Avg. loss: 2.3037, Accuracy: 943/10000 (9%)
+
+
+Test set: Avg. loss: 1.1305, Accuracy: 6029/10000 (60%)
+
+Normalized confusion matrix
+[[0.647 0.033 0.033 0.037 0.017 0.012 0.028 0.013 0.132 0.048]
+ [0.022 0.791 0.003 0.016 0.008 0.003 0.032 0.006 0.029 0.09 ]
+ [0.079 0.011 0.322 0.1   0.161 0.073 0.161 0.05  0.025 0.018]
+ [0.036 0.017 0.034 0.403 0.098 0.111 0.202 0.039 0.02  0.04 ]
+ [0.033 0.01  0.034 0.064 0.587 0.031 0.152 0.058 0.017 0.014]
+ [0.009 0.008 0.04  0.257 0.081 0.403 0.11  0.06  0.013 0.019]
+ [0.002 0.01  0.012 0.043 0.045 0.012 0.841 0.013 0.006 0.016]
+ [0.023 0.01  0.021 0.071 0.152 0.056 0.038 0.567 0.008 0.054]
+ [0.08  0.049 0.007 0.024 0.011 0.005 0.018 0.007 0.762 0.037]
+ [0.038 0.125 0.006 0.025 0.015 0.002 0.037 0.016 0.03  0.706]]
+```
+the following picture is displayed:
+![confution_matrix](./examples/cifar10/conf_matrix.png)

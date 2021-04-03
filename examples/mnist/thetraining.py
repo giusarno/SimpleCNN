@@ -21,7 +21,6 @@ def plotTrainLosses(train_counter,train_losses):
 if __name__ == '__main__':
     n_epochs = 5
     batch_size_train = 64
-    batch_size_test = 1000
     learning_rate = 0.01
     momentum = 0.5
     log_interval = 10
