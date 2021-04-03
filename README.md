@@ -1,10 +1,6 @@
 # SimpleCNN
 
-# package to simplify using cnn networks
-
-## How to run Examples:
-
-## Run the MNIST example from console & windows:
+## Utility functions to simplify dealing with cnn networks. Powered by Pytorch
 
 ## Install packages
 change "C:/Users/GiuseppeSarno/IdeaProjects" with the root of your project.
@@ -19,6 +15,7 @@ I hit this problem https://github.com/pytorch/pytorch/issues/23823 when installi
 and fixed as on https://www.reddit.com/r/pytorch/comments/c6cllq/issue_installing_pytorch/ew27hih/?utm_source=share&utm_medium=web2x
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem = 1
 
+## Run the MNIST example from console & windows:
 
 ## Run the model Generation
 
