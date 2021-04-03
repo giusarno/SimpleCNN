@@ -1,5 +1,6 @@
 # SimpleCNN
-package to simplify using cnn networks
+
+# package to simplify using cnn networks
 
 
 
