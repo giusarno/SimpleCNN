@@ -127,7 +127,7 @@ Train Epoch: 5 [49960/50000 (100%)]     Loss: 1.799423
 
 the following picture is displaied:
 
-![training loss](examples/cifar10/conf_matrix.png)
+![training loss](examples/cifar10/loss.png)
 
 
 ### Run the test and validation:
