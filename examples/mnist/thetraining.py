@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
     train_losses,test_accuracy,test_loss = cnnutil.fit_the_model(
         n_epochs,
-        10,
+        100,
         net,
         optimizer,
         train_loader,
