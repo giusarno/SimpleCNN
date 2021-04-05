@@ -1,7 +1,69 @@
 import torch
 import matplotlib.pyplot as plt
 import numpy as np
+import os.path
 from sklearn.metrics import confusion_matrix
+
+def plot_arrays(xaxis,yaxis,legend,xlabel,ylabel):
+    plt.plot(xaxis, yaxis, color='blue')
+    plt.legend([legend], loc='upper right')
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.show()
+
+def fit_the_model(epochs,log_interval,net,optimizer,train_loader,test_loader,criterion,savedirectory=None):
+    train_losses = []
+    train_counter = []
+    test_losses = []
+    test_accuracy = []
+    test_counter = []
+    for epoch in range(1, epochs+1):
+        max_acc=0
+        train_l,train_c =train_with_metrics(epoch,log_interval,net,optimizer,train_loader,criterion)
+        train_losses.append(train_l)
+        train_counter.append(train_c)
+        loss,acc = test(net,test_loader,criterion)
+        test_losses.append(loss)
+        test_accuracy.append(acc)
+        test_counter.append(epoch)
+        if epoch == 1:
+            acc = train_l
+            print("initialize acc = %f" % acc)
+        if acc > max_acc:
+            max_acc = acc
+            print("new maximum accuracy = %f" % max_acc)
+            if savedirectory != None:
+                modelfilename = os.path.join(savedirectory,'model.pth')
+                optimfilename = os.path.join(savedirectory,'optimizer.pth')
+                print("savedirectory not null saving model.pth in %s" % modelfilename)
+                print("savedirectory not null saving optimizer.pth in %s" % optimfilename)
+                torch.save(net.state_dict(), modelfilename)
+                torch.save(optimizer.state_dict(), optimfilename)
+
+        print("Test loss/Acc %f/%f" % (loss, acc))
+    return train_counter,train_losses,test_counter,test_accuracy,test_losses
+
+def train_with_metrics(epoch,log_interval,network,optimizer,train_loader,loss_function):
+    train_loss_x_epoch=0
+    running_loss=0
+    count_it=0
+    network.train()
+    for batch_idx, (data, target) in enumerate(train_loader):
+        count_it +=1
+        optimizer.zero_grad()
+        output = network(data)
+        loss = loss_function(output, target)
+        loss.backward()
+        optimizer.step()
+        running_loss += loss.item()
+        if batch_idx % log_interval == 0:
+            print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss/avg: {:.6f}/{:.6f}'.format(
+                epoch, batch_idx * len(data), len(train_loader.dataset),
+                       100. * batch_idx / len(train_loader), loss.item(),running_loss/count_it))
+
+    train_loss_x_epoch=running_loss/count_it
+
+    return train_loss_x_epoch,epoch
 
 def train(epoch,log_interval,network,optimizer,train_loader,loss_function):
     train_losses=[]
