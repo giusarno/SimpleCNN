@@ -13,19 +13,15 @@ def plot_arrays(xaxis,yaxis,legend,xlabel,ylabel):
 
 def fit_the_model(epochs,log_interval,net,optimizer,train_loader,test_loader,criterion,savedirectory=None):
     train_losses = []
-    train_counter = []
     test_losses = []
     test_accuracy = []
-    test_counter = []
     for epoch in range(1, epochs+1):
         max_acc=0
         train_l,train_c =train_with_metrics(epoch,log_interval,net,optimizer,train_loader,criterion)
         train_losses.append(train_l)
-        train_counter.append(train_c)
         loss,acc = test(net,test_loader,criterion)
         test_losses.append(loss)
         test_accuracy.append(acc)
-        test_counter.append(epoch)
         if epoch == 1:
             acc = train_l
             print("initialize acc = %f" % acc)
@@ -41,7 +37,7 @@ def fit_the_model(epochs,log_interval,net,optimizer,train_loader,test_loader,cri
                 torch.save(optimizer.state_dict(), optimfilename)
 
         print("Test loss/Acc %f/%f" % (loss, acc))
-    return train_counter,train_losses,test_counter,test_accuracy,test_losses
+    return train_losses,test_accuracy,test_losses
 
 def train_with_metrics(epoch,log_interval,network,optimizer,train_loader,loss_function):
     train_loss_x_epoch=0
