@@ -34,28 +34,33 @@ inputfile           = model.csv (input file with model definition)
 ### Run the Training
 ```
 > cd ./examples/mnist
-> python3 thetest.py
+> python3 thetraining.py
 ```
 Output:
 ```
-Train Epoch: 1 [0/60000 (0%)]   Loss: 2.395239
-Train Epoch: 1 [640/60000 (1%)] Loss: 2.281763
-Train Epoch: 1 [1280/60000 (2%)]        Loss: 2.231858
-Train Epoch: 1 [1920/60000 (3%)]        Loss: 2.165063
-Train Epoch: 1 [2560/60000 (4%)]        Loss: 2.135278
-Train Epoch: 1 [3200/60000 (5%)]        Loss: 2.046879
-Train Epoch: 1 [3840/60000 (6%)]        Loss: 1.832578
+Train Epoch: 1 [0/60000 (0%)]   Loss/avg: 2.395239/2.395239
+Train Epoch: 1 [6400/60000 (11%)]       Loss/avg: 1.123712/1.907594
+Train Epoch: 1 [12800/60000 (21%)]      Loss/avg: 0.777390/1.434527
+Train Epoch: 1 [19200/60000 (32%)]      Loss/avg: 0.646094/1.191016
+Train Epoch: 1 [25600/60000 (43%)]      Loss/avg: 0.704663/1.036754
+Train Epoch: 1 [32000/60000 (53%)]      Loss/avg: 0.431299/0.927583
 ..............................................
 ..............................................
-Train Epoch: 5 [55680/60000 (93%)]      Loss: 0.189094
-Train Epoch: 5 [56320/60000 (94%)]      Loss: 0.117050
-Train Epoch: 5 [56960/60000 (95%)]      Loss: 0.081903
-Train Epoch: 5 [57600/60000 (96%)]      Loss: 0.066808
-Train Epoch: 5 [58240/60000 (97%)]      Loss: 0.108263
-Train Epoch: 5 [58880/60000 (98%)]      Loss: 0.081022
-Train Epoch: 5 [59520/60000 (99%)]      Loss: 0.092410
+Train Epoch: 5 [25600/60000 (43%)]      Loss/avg: 0.143671/0.159320
+Train Epoch: 5 [32000/60000 (53%)]      Loss/avg: 0.211940/0.160901
+Train Epoch: 5 [38400/60000 (64%)]      Loss/avg: 0.092523/0.161049
+Train Epoch: 5 [44800/60000 (75%)]      Loss/avg: 0.093523/0.160512
+Train Epoch: 5 [51200/60000 (85%)]      Loss/avg: 0.243839/0.159639
+Train Epoch: 5 [57600/60000 (96%)]      Loss/avg: 0.073853/0.158468
+
+Test set: Avg. loss: 0.0001, Accuracy: 9824/10000 (98%)
+
+new maximum accuracy = 98.239998
+savedirectory not null saving model.pth in ./results\model.pth
+savedirectory not null saving optimizer.pth in ./results\optimizer.pth
+Test loss/Acc 0.000066/98.239998
 ```
-the following picture is displayed:
+the following pictures are displayed:
 
 
 ![Loss Function](https://github.com/giusarno/SimpleCNN/blob/master/examples/mnist/loss.png)
