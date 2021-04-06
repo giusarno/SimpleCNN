@@ -64,7 +64,7 @@ the following pictures are displayed:
 
 
 ![Loss Function](https://github.com/giusarno/SimpleCNN/blob/master/examples/mnist/loss.png)
-
+![Loss Function](https://github.com/giusarno/SimpleCNN/blob/master/examples/mnist/accuracy.png)
 ### Run the test and validation:
 
 `> python3 thetest.py`

@@ -54,6 +54,6 @@ if __name__ == '__main__':
 
     counter = [i+1 for i in range(n_epochs)]
 
-    cnnutil.plot_arrays(counter,train_losses,'loss','training examples','loss')
+    cnnutil.plot_arrays(counter,train_losses,'loss','epoch','loss')
     cnnutil.plot_arrays(counter,test_accuracy,'accuracy','epoch','accuracy')
 
