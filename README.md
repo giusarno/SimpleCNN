@@ -10,10 +10,6 @@ set PYTHONPATH=%PYTHONPATH%;C:/Users/GiuseppeSarno/IdeaProjects/SimpleCNN/
 cd C:\Users\GiuseppeSarno\IdeaProjects\SimpleCNN
 pip install -r ../../requirements.txt
 ```
-Known issues:
-I hit this problem https://github.com/pytorch/pytorch/issues/23823 when installing "torch"
-and fixed as on https://www.reddit.com/r/pytorch/comments/c6cllq/issue_installing_pytorch/ew27hih/?utm_source=share&utm_medium=web2x
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem = 1
 
 ## Run the MNIST example from console & windows:
 
