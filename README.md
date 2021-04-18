@@ -1,5 +1,10 @@
 # SimpleCNN
 
+I started working on AI related projects back in 2019. I investigated projects on the internet related to Models and how to train them with Pytorch , Keras and Tensorflow.
+I looked at run all the sample project out there on image classification such us CIFAR10 and MNIST and beyond looking at complex speaker recognition models.
+I also started collecting information on how model and learning actually works and created a comprehensive slidepack ([Personal blog on deep learning](https://sites.google.com/site/gsarnotechboard/Downhome/deep-learning)).
+In all the pytorch projects I worked on, I noticed that for simple modelling training and testing there was a lot of boiler plate code required which could be easily wrapped up in a library and easily shared and reused. As a learning exercise and useful thing for my projects running on pytorch I created this library which should make things bit easier for somebody new to CNN to create models, train them and visualize results.
+
 ## Utility functions to simplify dealing with cnn networks. Powered by Pytorch
 
 ## Install packages
