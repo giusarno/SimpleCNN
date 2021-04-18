@@ -1,9 +1,12 @@
 # SimpleCNN
 
-I started working on AI related projects back in 2019. I investigated projects on the internet related to Models and how to train them with Pytorch , Keras and Tensorflow.
-I looked at run all the sample project out there on image classification such us CIFAR10 and MNIST and beyond looking at complex speaker recognition models.
-I also started collecting information on how model and learning actually works and created a comprehensive slidepack ([Personal blog on deep learning](https://sites.google.com/site/gsarnotechboard/Downhome/deep-learning)).
-In all the pytorch projects I worked on, I noticed that for simple modelling training and testing there was a lot of boiler plate code required which could be easily wrapped up in a library and easily shared and reused. As a learning exercise and useful thing for my projects running on pytorch I created this library which should make things bit easier for somebody new to CNN to create models, train them and visualize results.
+I started working on AI related projects back in 2019. My main focus were CNN networks, how they work and how to train and test Models. I started with projects using obviouly python and Pytorch but I have also done prototypes with Keras and Tensorflow.
+My first projects were related to image classification and I came across many examples published using the CIFAR10 and MNIST image set but I went beyond and looked at models capable to perform speaker recognizion / identification.
+During this journey I collected information on how models and deep learning work and created a comprehensive slidepack on my personal blog ([Personal blog on deep learning](https://sites.google.com/site/gsarnotechboard/Downhome/deep-learning)).
+Now why simplecnn. In all the pytorch projects I worked on, I noticed that for simple model training and testing there was a lot of boiler plate code required which could be easily wrapped up in a library and easily shared and reused. Although AI and Deep Learning are very complex subject actually the concept behind them is very simple and I felt like today dispite libraries make it very easy to perform simple operation they are not yet meant for everybody (like me without all the deep knowledge on the subject).
+The reason behind simple CNN is to bring simple coders to be able to build, train and test simple models even if only for accademic purposes. 
+It would really be nice if somebody were to create a project similar to "scratch" for python to be able to work on AI models.
+
 
 ## Utility functions to simplify dealing with cnn networks. Powered by Pytorch
 
