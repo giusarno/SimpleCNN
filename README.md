@@ -172,10 +172,14 @@ the following picture is displayed:
 ![confution_matrix](./examples/cifar10/conf_matrix.png)
 
 
-## Use CNNModel
+## Use CNNModel  (examples/mnist/thetrainingnew.py)
 
 The CNNModel class is split in 2 sections (as 99% of the CNN networks)
 the Convolution section and the Fully connected section.
+
+init parameters (CNNModel (input channels, input size)
+
+Note: the dimension of the network is calculated by using the input size.
 
 Those are the layers (with parameters) supported today in the Convolution section:
 Conv    (output,kernel,stride,padding)
@@ -190,3 +194,7 @@ LogSoftMax
 ReLU
 Dropout
 BatchNorm 
+
+`> python3 thetrainingnew.py`
+
+
