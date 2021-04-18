@@ -105,7 +105,6 @@ the following picture is displayed:
 
 ![confusion matrix](https://github.com/giusarno/SimpleCNN/blob/master/examples/mnist/conf_matrix.png)
 
-
 ## Run the CIFAR10 example
 
 ### Run the model Generation
@@ -171,3 +170,23 @@ Normalized confusion matrix
 ```
 the following picture is displayed:
 ![confution_matrix](./examples/cifar10/conf_matrix.png)
+
+
+## Use CNNModel
+
+The CNNModel class is split in 2 sections (as 99% of the CNN networks)
+the Convolution section and the Fully connected section.
+
+Those are the layers (with parameters) supported today in the Convolution section:
+Conv    (output,kernel,stride,padding)
+MaxPool (kernel,stride,padding)
+ReLU
+Dropout (percentage)
+BatchNorm
+
+Those are ones allowed in the Fully connected section:
+Linear    (output)
+LogSoftMax
+ReLU
+Dropout
+BatchNorm 
