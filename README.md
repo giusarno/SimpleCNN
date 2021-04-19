@@ -172,7 +172,7 @@ the following picture is displayed:
 ![confution_matrix](./examples/cifar10/conf_matrix.png)
 
 
-## Use CNNModel  (examples/mnist/thetrainingnew.py)
+## The CNNModel class  (examples/mnist/thetrainingnew.py)
 
 The CNNModel class is split in 2 sections (as 99% of the CNN networks)
 the Convolution section and the Fully connected section.
