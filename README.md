@@ -17,7 +17,8 @@ The goal with the items below is for a python coder to be able to create, train 
 - [x] Examples MNIST, CIFAR10
 - [ ] Provide handling of data sets in the library 
 - [ ] Support error functions and optimizers in the library. 
-- [ ] TBD
+- [ ] Create use case based (e.g. image recognition, voice recognition) pretrained models.
+- [ ] tackle transfer learning.
 
 ## Utility functions to simplify dealing with cnn networks. Powered by Pytorch
 
